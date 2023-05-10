@@ -10,7 +10,7 @@ function newItem() {
     $('#list').append(li);
  }
 
-$('li').on('dblclick', function(){
+li.on('dblclick', function(){
     li.toggleClass('strike');
 } )
 
@@ -20,7 +20,7 @@ li.append(crossOutButton);
 
 
 $(crossOutButton).on('click', function () {
-    li.addClass('delete')
+    li.remove()
 });
 
 $('#list').sortable();
