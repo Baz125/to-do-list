@@ -14,4 +14,14 @@ $('li').on('dblclick', function(){
     li.toggleClass('strike');
 } )
 
+let crossOutButton = $('<crossOutButton></crossOutButton>');
+crossOutButton.append(document.createTextNode('x'));
+li.append(crossOutButton);
+
+
+$(crossOutButton).on('click', function () {
+    li.addClass('delete')
+});
+
+$('#list').sortable();
 }
